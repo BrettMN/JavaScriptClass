@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>set</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body class="container">
+<h1>set</h1>
+<p>
+<h3>What?</h3>
+The <code>set</code> object lets you store unique values of any type, whether primitive values or object references.
+<p>
+<h3>When?</h3>
+Can be used in place of <code>var</code> when you want the value to stay constant though out the use of your program.
+</p>
+<p>
+<h3>How?</h3>
+<h4>Basic set:</h4>
+<pre>
+var set = new Set();
+set.add(1);
+set.add(2);
+set.add(3);
+console.log(set.size); //3
+</pre>
+<h4>Unique Values:</h4>
+<pre>
+var set = new Set();
+set.add(1);
+set.add(1);
+set.add(1);
+console.log(set.size);  //1
+</pre>
+<h4>No Typecasting:</h4>
+<pre>
+var set = new Set();
+set.add(1);
+set.has(1); //true
+set.has("1"); //false
+set.add("1");
+set.has("1"); //true
+</pre>
+<h4>Iteration:</h4>
+<pre>
+var items = new Set([1, 2, 3, 4, 5]);
+for (let num of items) {
+	console.log(num); //logs 1, 2, 3, 4, 5
+}
+</pre>
+</p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>let</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body class="container">
+<h1>let</h1>
+<p>
+<h3>What?</h3>
+The <code>let</code> statement declares a block scope local variable, optionally initializing it to a value.</p>
+<p><code>let</code> does not hoist.</p>
+<p>
+<h3>When?</h3>
+Can be used in place of <code>var</code> when you want block scoping. 
+</p>
+<p>
+<h3>How?</h3>
+<div>
+<h4>Scoped to the brackets:</h4>
+<pre>
+let foo = 2;
+if(true){
+	let bar = 1;
+}
+console.log( foo + bar );
+</pre>
+</div>
+<div>
+<h4>Does not hoist and Temporal Deadzone:</h4>
+<pre>
+function doSomething(){
+	console.log(a);  //Error?
+	let a = 1;
+	console.log(a);
+}
+</pre>
+</div>
+</p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>Hoisting</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body class="container">
+<h1>Hoisting</h1>
+<p>
+<h3>What?</h3>
+Every definition of a variable is really a declaration of the variable at the top of its scope and an assignment at the place where the definition is.</p>
+<p>
+<h3>When?</h3>
+Every time <code>var</code> is used to declare a variable.
+</p>
+<p>
+<h3>How?</h3>
+<h4>What you type:</h4>
+<pre>
+bla = 2;
+var bla;
+</pre>
+<h4>How the compiler interprets it:</h4>
+<pre>
+var bla = undefined;
+bla = 2;
+</pre>
+</p>
+</body>
+</html>
